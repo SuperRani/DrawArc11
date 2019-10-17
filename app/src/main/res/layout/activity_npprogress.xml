@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NPProgressActivity"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.drawarc.NewPieProgress
+            android:id="@+id/newPg"
+            android:layout_width="202dp"
+            android:layout_height="197dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/nppText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textSize="25dp"
+            android:background="#FFFFFF"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/clickButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Click" />
+
+
+</LinearLayout>

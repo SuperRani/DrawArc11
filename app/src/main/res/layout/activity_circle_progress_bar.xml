@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".CircleProgress">
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/custom_progress2"
+        android:layout_width="198dp"
+        android:layout_height="241dp"
+        android:layout_marginTop="164dp"
+        android:gravity="center_vertical"
+        app:drawBackgroundOutsideProgress="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:line_count="30"
+        app:line_width="4dp"
+        app:progress_background_color="@color/blue"
+        app:progress_shader="radial"
+        app:progress_start_color="@color/blue"
+        app:progress_start_degree="-90"
+        app:progress_stroke_width="1dp"
+        app:progress_text_color="@color/red"
+        app:progress_text_size="20dp"
+        app:style="solid" />
+
+    <Button
+        android:id="@+id/circleStartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_progress2"
+        app:layout_constraintVertical_bias="0.309"></Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
