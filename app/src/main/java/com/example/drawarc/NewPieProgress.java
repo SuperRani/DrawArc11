@@ -17,20 +17,22 @@ public class NewPieProgress extends View {
     final float START_ANGLE = 360.f;
     public RectF rectF;
     public Paint paint;
-//    private static final float MAX_DEGREE = 360.0f;
-//    private static final int DEFAULT_MAX = 100;
-//    private boolean mDrawBackgroundOutsideProgress = false;
-
+    public OnProgressListener mOnProgressListener;
 
     // timer // 시간 설정 가능하게
     // listener -> 진행사항, 완료사항
     //
 
 
-    public interface onProgressListener {
+    public interface OnProgressListener {
         void onProgress(int percent);
         void onComplete();
     }
+    public void setOnProgressListener(NewPieProgress.OnProgressListener onProgressListener){
+        mOnProgressListener = onProgressListener;
+    }
+
+
 
 
     public NewPieProgress(Context context) {
@@ -82,21 +84,10 @@ public class NewPieProgress extends View {
         canvas.drawArc(rectF, START_ANGLE, START_ANGLE - mProgress, true, paint);
 
 
+
     }
 
-//
-//    private void drawProgress(Canvas canvas) {
-//
-//        int mMax = DEFAULT_MAX;
-//
-//        if (mDrawBackgroundOutsideProgress) {
-//            float startAngle = MAX_DEGREE * mProgress / mMax;
-//            float sweepAngle = MAX_DEGREE - startAngle;
-//            canvas.drawArc(rectF, startAngle, sweepAngle, true, paint);
-//        } else {
-//            canvas.drawArc(rectF, 0.0f, MAX_DEGREE, true, paint);
-//        }
-//        canvas.drawArc(rectF, 0.0f, MAX_DEGREE * mProgress / mMax, true, paint);
+
 
 
 }
